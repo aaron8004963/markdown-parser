@@ -58,7 +58,6 @@ public class MarkdownParseTest {
     @Test
     public void fileTest5() throws IOException {
         ArrayList<String> toTest = new ArrayList<String>();
-        toTest.add("page.com");
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
                         Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file5.md"))),
@@ -88,7 +87,6 @@ public class MarkdownParseTest {
     @Test
     public void fileTest8() throws IOException {
         ArrayList<String> toTest = new ArrayList<String>();
-        toTest.add("a link on the first line");
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(

@@ -31,14 +31,27 @@ public class MarkdownParse {
                     break;
                 }
                 else{
+                    if(markdown.charAt(closeBracket + 1) != '('){
+                        currentIndex = closeBracket + 1;
+                        continue;
+                    }
                     int openParen = markdown.indexOf("(", closeBracket);
                     if(openParen == -1){
                         break;
                     }
                     else{
                         int closeParen = markdown.indexOf(")", openParen);
-                        toReturn.add(markdown.substring(openParen + 1, closeParen));
-                        currentIndex = closeParen + 1;
+                        if(closeParen == -1){
+                            break;
+                        }
+                        else{
+                            if(markdown.indexOf(" ",openParen) < closeParen && markdown.indexOf(" ",openParen) != -1){
+                                currentIndex = closeParen + 1;
+                                continue;
+                            }
+                            toReturn.add(markdown.substring(openParen + 1, closeParen));
+                            currentIndex = closeParen + 1;
+                        }
                     }
                 }
                 

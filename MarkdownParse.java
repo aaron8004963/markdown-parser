@@ -27,10 +27,21 @@ public class MarkdownParse {
                     }
                 }
                 int closeBracket = markdown.indexOf("]", openBracket);
-                int openParen = markdown.indexOf("(", closeBracket);
-                int closeParen = markdown.indexOf(")", openParen);
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
-                currentIndex = closeParen + 1;
+                if(closeBracket == -1){
+                    break;
+                }
+                else{
+                    int openParen = markdown.indexOf("(", closeBracket);
+                    if(openParen == -1){
+                        break;
+                    }
+                    else{
+                        int closeParen = markdown.indexOf(")", openParen);
+                        toReturn.add(markdown.substring(openParen + 1, closeParen));
+                        currentIndex = closeParen + 1;
+                    }
+                }
+                
             }
         }
 

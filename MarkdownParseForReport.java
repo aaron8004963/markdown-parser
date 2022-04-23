@@ -14,9 +14,7 @@ public class MarkdownParseForReport {
         while(currentIndex < markdown.length()) {
 
             int openBracket = markdown.indexOf("[", currentIndex);
-            if(openBracket == -1){
-                break;
-            }
+            
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);

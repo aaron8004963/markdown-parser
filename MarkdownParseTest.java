@@ -18,7 +18,7 @@ public class MarkdownParseTest {
         toTest.add("https://something.com");
         toTest.add("some-thing.html");
 
-        assertEquals(MarkdownParse.getLinks(Files.readString(Path.of("test-file.md"))),
+        assertEquals(MarkdownParse.getLinks(Files.readString(Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file.md"))),
             toTest);
     }
 }

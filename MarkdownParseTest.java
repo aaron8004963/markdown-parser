@@ -6,10 +6,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class MarkdownParseTest {
-    @Test
-    public void addition() {
-        assertEquals(2, 1 + 1);
-    }
 
     @Test
     public void fileTest() throws IOException {
@@ -94,4 +90,13 @@ public class MarkdownParseTest {
                 toTest);
     }
 
+    @Test
+    public void fileTest9() throws IOException {
+        ArrayList<String> toTest = new ArrayList<String>();
+        toTest.add("xxx.com");
+        assertEquals(
+                MarkdownParse.getLinks(Files.readString(
+                        Path.of("test-file9.md"))),
+                toTest);
+    }
 }

@@ -94,8 +94,4 @@ public class MarkdownParseTest {
                 toTest);
     }
 
-    @Test
-    public void fileTest9() throws IOException {
-        assertEquals(1,2);
-    }
 }

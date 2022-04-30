@@ -31,13 +31,13 @@ public class MarkdownParse {
                     break;
                 }
                 else{
-                    if(markdown.charAt(closeBracket + 1) != '('){
-                        currentIndex = closeBracket + 1;
-                        continue;
-                    }
                     int openParen = markdown.indexOf("(", closeBracket);
                     if(openParen == -1){
                         break;
+                    }
+                    else if(markdown.charAt(openParen - 1) != ']'){
+                        currentIndex = openParen -1;
+                        continue;
                     }
                     else{
                         int closeParen = markdown.indexOf(")", openParen);

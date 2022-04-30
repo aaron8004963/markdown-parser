@@ -93,9 +93,4 @@ public class MarkdownParseTest {
                         Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file8.md"))),
                 toTest);
     }
-    
-    @Test
-    public void failTest() {
-            assertEquals(1,2);
-    }
 }

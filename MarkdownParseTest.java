@@ -19,7 +19,7 @@ public class MarkdownParseTest {
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file.md"))),
+                        Path.of("test-file.md"))),
                 toTest);
     }
 
@@ -31,7 +31,7 @@ public class MarkdownParseTest {
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file2.md"))),
+                        Path.of("test-file2.md"))),
                 toTest);
     }
 
@@ -41,7 +41,7 @@ public class MarkdownParseTest {
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file3.md"))),
+                        Path.of("test-file3.md"))),
                 toTest);
     }
 
@@ -51,7 +51,7 @@ public class MarkdownParseTest {
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file4.md"))),
+                        Path.of("test-file4.md"))),
                 toTest);
     }
 
@@ -60,7 +60,7 @@ public class MarkdownParseTest {
         ArrayList<String> toTest = new ArrayList<String>();
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file5.md"))),
+                        Path.of("test-file5.md"))),
                 toTest);
     }
 
@@ -70,7 +70,7 @@ public class MarkdownParseTest {
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file6.md"))),
+                        Path.of("test-file6.md"))),
                 toTest);
     }
 
@@ -80,7 +80,7 @@ public class MarkdownParseTest {
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file7.md"))),
+                        Path.of("test-file7.md"))),
                 toTest);
     }
 
@@ -90,7 +90,7 @@ public class MarkdownParseTest {
 
         assertEquals(
                 MarkdownParse.getLinks(Files.readString(
-                        Path.of("C:/Users/aaron/OneDrive/Desktop/Java/cse 15/markdown-parser/test-file8.md"))),
+                        Path.of("test-file8.md"))),
                 toTest);
     }
 }

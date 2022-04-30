@@ -45,7 +45,8 @@ public class MarkdownParse {
                             break;
                         }
                         else{
-                            if(markdown.indexOf(" ",openParen) < closeParen && markdown.indexOf(" ",openParen) != -1){
+                            if(markdown.indexOf(" ",openParen) < closeParen 
+                            && markdown.indexOf(" ",openParen) != -1){
                                 currentIndex = closeParen + 1;
                                 continue;
                             }

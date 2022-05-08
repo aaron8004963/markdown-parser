@@ -6,8 +6,8 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class MarkdownParseTest {
-        // mark
-        @Test
+        // mark from server
+        @Test 
         public void fileTest() throws IOException {
                 ArrayList<String> toTest = new ArrayList<String>();
                 toTest.add("https://something.com");

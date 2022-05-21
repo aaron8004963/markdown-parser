@@ -21,7 +21,7 @@ public class MarkdownParse {
             }
             else{
                 if(openBracket != 0){
-                    if(markdown.charAt(openBracket - 1) == '!'){
+                    if(markdown.charAt(openBracket - 1) == '!' || markdown.charAt(openBracket - 1) == '`' ){
                         currentIndex = openBracket + 1;
                         continue;
                     }
@@ -36,7 +36,7 @@ public class MarkdownParse {
                         break;
                     }
                     else if(markdown.charAt(openParen - 1) != ']'){
-                        currentIndex = openParen -1;
+                        currentIndex = openParen +1;
                         continue;
                     }
                     else{
@@ -45,11 +45,6 @@ public class MarkdownParse {
                             break;
                         }
                         else{
-                            if(markdown.indexOf(" ",openParen) < closeParen 
-                            && markdown.indexOf(" ",openParen) != -1){
-                                currentIndex = closeParen + 1;
-                                continue;
-                            }
                             toReturn.add(markdown.substring(openParen + 1, closeParen));
                             currentIndex = closeParen + 1;
                         }

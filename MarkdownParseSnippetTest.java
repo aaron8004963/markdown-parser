@@ -8,77 +8,75 @@ import java.util.ArrayList;
 public class MarkdownParseSnippetTest {
     // mark from server
     @Test 
-    public void fileTest() throws IOException {
+    public void myTest() throws IOException {
             ArrayList<String> toTest = new ArrayList<String>();
             toTest.add("`google.com");
             toTest.add("google.com");
             toTest.add("ucsd.edu");
 
-            assertEquals(
+            assertEquals(toTest,
                             MarkdownParse.getLinks(Files.readString(
-                                            Path.of("test-file.md"))),
-                            toTest);
+                                            Path.of("Snippet_1.md"))));
     }
 
-    @Test
-    public void fileTest2() throws IOException {
+    @Test 
+    public void myTest2() throws IOException {
             ArrayList<String> toTest = new ArrayList<String>();
-            toTest.add("https://something.com");
-            toTest.add("some-page.html");
+            toTest.add("a.com");
+            toTest.add("a.com(())");
+            toTest.add("example.com");
 
-            assertEquals(
+            assertEquals(toTest,
                             MarkdownParse.getLinks(Files.readString(
-                                            Path.of("test-file2.md"))),
-                            toTest);
+                                            Path.of("Snippet_2.md"))));
     }
 
-    @Test
-    public void fileTest3() throws IOException {
+    @Test 
+    public void myTest3() throws IOException {
             ArrayList<String> toTest = new ArrayList<String>();
+            toTest.add("https://www.twitter.com");
+            toTest.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+            toTest.add("https://cse.ucsd.edu/");
 
-            assertEquals(
+            assertEquals(toTest,
                             MarkdownParse.getLinks(Files.readString(
-                                            Path.of("test-file3.md"))),
-                            toTest);
+                                            Path.of("Snippet_3.md"))));
     }
 
-    @Test
-    public void fileTest4() throws IOException {
+    @Test 
+    public void reviewedTest1() throws IOException {
             ArrayList<String> toTest = new ArrayList<String>();
+            toTest.add("`google.com");
+            toTest.add("google.com");
+            toTest.add("ucsd.edu");
 
-            assertEquals(
-                            MarkdownParse.getLinks(Files.readString(
-                                            Path.of("test-file4.md"))),
-                            toTest);
+            assertEquals(toTest,
+                MarkdownParseReviewed.getLinks(Files.readString(
+                                            Path.of("Snippet_1.md"))));
     }
 
-    @Test
-    public void fileTest5() throws IOException {
+    @Test 
+    public void reviewedTest2() throws IOException {
             ArrayList<String> toTest = new ArrayList<String>();
-            assertEquals(
-                            MarkdownParse.getLinks(Files.readString(
-                                            Path.of("test-file5.md"))),
-                            toTest);
+            toTest.add("a.com");
+            toTest.add("a.com(())");
+            toTest.add("example.com");
+
+            assertEquals(toTest,
+                MarkdownParseReviewed.getLinks(Files.readString(
+                                            Path.of("Snippet_2.md"))));
     }
 
-    @Test
-    public void fileTest6() throws IOException {
+    @Test 
+    public void reviewedTest3() throws IOException {
             ArrayList<String> toTest = new ArrayList<String>();
+            toTest.add("https://www.twitter.com");
+            toTest.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+            toTest.add("https://cse.ucsd.edu/");
 
-            assertEquals(
-                            MarkdownParse.getLinks(Files.readString(
-                                            Path.of("test-file6.md"))),
-                            toTest);
-    }
-
-    @Test
-    public void fileTest7() throws IOException {
-            ArrayList<String> toTest = new ArrayList<String>();
-
-            assertEquals(
-                            MarkdownParse.getLinks(Files.readString(
-                                            Path.of("test-file7.md"))),
-                            toTest);
+            assertEquals(toTest,
+                MarkdownParseReviewed.getLinks(Files.readString(
+                                            Path.of("Snippet_3.md"))));
     }
 
 }
